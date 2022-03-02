@@ -1,33 +1,3 @@
-﻿#include <iostream>
-#include <ctime>
-
-using namespace std;
-
-void mass_rand_input(int* mass, int size);
-void mass_input(int* mass, int size);
-void mass_output(int* mass, int size);
-int min_a(int* mass, int size);
-int max_a(int* mass, int size);
-bool levo_pravo(int* mass, int size);
-bool upor_vozr(int* mass, int size);
-bool upor_ubiv(int* mass, int size);
-void sdvig_vlevo(int* mass, int size);
-void sdvig_vpravo(int* mass, int size);
-void sdvigMleft(int* mass, int size, int move);
-void sdvigMright(int* mass, int size, int move);
-void sdvig1000(int* mass, int size);
-int pn(int* mass, int size, int poz);
-void sdvigMaxMin(int* mass, int size);
-
-int main() {
-	setlocale(LC_ALL, "rus");
-	srand(time(0));
-	const int size = 10;
-	int mass[size];
-
-	return 0;
-}
-
 void mass_rand_input(int* mass, int size) {
 	for (int i = 0; i < size; i++) {
 		mass[i] = rand() % 100;
