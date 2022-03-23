@@ -55,6 +55,6 @@ void pr_str(int** a, int n, int m) {
 		for (int j = 0; j < m; j++) {
 			pr *= a[i][j];
 		}
-		cout << "Сумма элем. строки = " << pr << endl;
+		cout << "Произведение элем. строки = " << pr << endl;
 	}
 }
