@@ -1,32 +1,32 @@
-﻿//14. Дана строка. Напечатать те слова этой строки,
+//14. Дана строка. Напечатать те слова этой строки,
 //которые отличны от последнего слова и выполнено свойство:
 //cлово совпадает с конечным отрезком латинского алфавита(z, yz, xyz и т.д.).
 
 #include <iostream> 
+#include <cstring>
 
 using namespace std;
 
-void input_str(char* str);
+void input_str(char* str, int size);
 void output_str(char* str);
 void last_word(char* str, char* word);
 void different_words(char* str);
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-	srand(time(0));
 
 	const int size = 100;
 	char mass[size];
 
-	input_str(mass);
+	input_str(mass, size);
 	different_words(mass);
 
 	system("pause");
 	return 0;
 }
 
-void input_str(char* str) {
-	gets_s(str, 100);
+void input_str(char* str, int size) {
+	gets_s(str, size);
 }
 void output_str(char* str) {
 	cout << str << endl;
@@ -67,9 +67,7 @@ void different_words(char* str) {
 			i++;
 			j++;
 		}
-		if (str2[s - 1] != ' ') {
-			str2[s++] = ' ';
-		}
+		str2[s++] = ' ';
 	}
 	str2[s] = '\0';
 	output_str(str2);
